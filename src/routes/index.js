@@ -32,7 +32,7 @@ router.get("/fav", (req, res) => {
 
 router.delete("/fav/:id", (req, res) => {
   const { id } = req.params;
-  favs = favs.filter((char) => char.id !== id);
+  favs = favs.filter((char) => char.id !== parseInt(id));
   res.status(200).json({ status: "Ok" });
 });
 
