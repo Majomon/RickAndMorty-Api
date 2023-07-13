@@ -6,10 +6,6 @@ const prueba = require("../controllers/prueba");
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Hola");
-});
-
 router.get("/onsearch/:id", getCharById);
 
 router.get("/detail/:id", getCharDetail);
