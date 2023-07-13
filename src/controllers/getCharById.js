@@ -5,7 +5,7 @@ const getCharById = (req, res) => {
   const { id } = req.params;
   /*   id, name, species, image y gender. */
   axios
-    .get(`${URL}/character/${id}?key=${KEY}`)
+    .get(`${URL}/character/${id}`)
     .then((response) => {
       const { id, name, species, image, gender } = response.data;
       res.status(200).json({ id, name, species, image, gender });
@@ -16,4 +16,3 @@ const getCharById = (req, res) => {
 };
 
 module.exports = getCharById;
-

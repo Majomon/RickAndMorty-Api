@@ -5,10 +5,13 @@ let favs = require("../utils/favs");
 
 const router = Router();
 
+router.get("/", (req, res) => {
+  res.send("Hola");
+});
+
 router.get("/onsearch/:id", getCharById);
 
 router.get("/detail/:id", getCharDetail);
-
 
 //! Ruta a favoritos con distintos request
 router.post("/fav", (req, res) => {
