@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { KEY } = process.env;
+const { URL } = process.env;
 
 const getCharDetail = (req, res) => {
   const { id } = req.params;

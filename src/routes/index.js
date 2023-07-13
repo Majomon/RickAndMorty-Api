@@ -2,6 +2,7 @@ const { Router } = require("express");
 const getCharById = require("../controllers/getCharById");
 const getCharDetail = require("../controllers/getCharDetail");
 let favs = require("../utils/favs");
+const prueba = require("../controllers/prueba");
 
 const router = Router();
 
@@ -9,9 +10,7 @@ router.get("/", (req, res) => {
   res.send("Hola");
 });
 
-router.get("/a", (req, res) => {
-  res.send("Chau");
-});
+router.get("/a", prueba);
 
 router.get("/onsearch/:id", getCharById);
 
