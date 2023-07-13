@@ -3,7 +3,6 @@ const { URL } = process.env;
 
 const getCharById = (req, res) => {
   const { id } = req.params;
-  /*   id, name, species, image y gender. */
   axios
     .get(`${URL}/character/${id}`)
     .then((response) => {
