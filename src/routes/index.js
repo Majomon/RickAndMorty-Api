@@ -9,6 +9,10 @@ router.get("/", (req, res) => {
   res.send("Hola");
 });
 
+router.get("/a", (req, res) => {
+  res.send("Chau");
+});
+
 router.get("/onsearch/:id", getCharById);
 
 router.get("/detail/:id", getCharDetail);
