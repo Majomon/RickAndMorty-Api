@@ -15,8 +15,15 @@ router.get("/detail/:id", getCharDetail);
 
 //! Ruta a favoritos con distintos request
 router.post("/fav", (req, res) => {
-  favs.push(req.body);
-  res.status(200).json(favs);
+  const newFavorite = req.body;
+  const existingFavorite = favs.find((char) => char.id === newFavorite.id);
+
+  if (existingFavorite) {
+    res.status(400).json({ error: "El personaje ya está en favoritos" });
+  } else {
+    favs.push(newFavorite);
+    res.status(200).json(favs);
+  }
 });
 
 router.get("/fav", (req, res) => {
