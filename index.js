@@ -1,5 +1,6 @@
 const server = require("./src/server");
 
-server.listen(3001, () => {
-  console.log("Server on port 3001");
+const port = process.env.PORT || 4000;
+server.listen(port, () => {
+  console.log("Server on port", port);
 });

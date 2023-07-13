@@ -4,7 +4,6 @@ const express = require("express");
 const router = require("./routes");
 const morgan = require("morgan");
 const cors = require("cors");
-const PORT = process.env.PORT || 3001;
 
 // Creando el server con Express
 const server = express();
@@ -20,6 +19,5 @@ server.use(cors());
 
 // El server esta habilitado para usar router
 server.use("/", router);
-
 
 module.exports = server;
