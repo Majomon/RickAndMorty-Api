@@ -2,9 +2,12 @@ const { Router } = require("express");
 const getCharById = require("../controllers/getCharById");
 const getCharDetail = require("../controllers/getCharDetail");
 let favs = require("../utils/favs");
-const prueba = require("../controllers/prueba");
 
 const router = Router();
+
+router.get("/", (req, res) => {
+  res.send("Holis. Estas en el Home de la Api");
+});
 
 router.get("/onsearch/:id", getCharById);
 
