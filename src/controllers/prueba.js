@@ -3,7 +3,7 @@ const { URL } = process.env;
 
 const prueba = (req, res) => {
   axios
-    .get(`${URL}`)
+    .get(`https://rickandmortyapi.com/api`)
     .then((response) => {
       const resp = response.data;
       res.status(200).json(resp);
